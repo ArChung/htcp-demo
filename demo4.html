@@ -5,35 +5,120 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>環台光電</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <style>
-    body{
+    body {
       background-color: #f6f6f6;
     }
-    html,body{
+
+    html,
+    body {
       margin: 0;
       padding: 0;
     }
+
     .container {
       margin: 0 auto;
       max-width: 1336px;
+      position: relative;
     }
-    img{
+
+    img {
       display: block;
       width: 100%;
+    }
+
+    .swiper-container {
+      width: 100%;
+      position: relative;
+    }
+
+    .header {
+      /* width: 100%;
+      height: 60px;
+      position: fixed;
+      top: 0; 
+      left: 50%;
+      background-image: url('./images/04/header.png');
+      z-index: 5; */
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 100%;
+      max-width: 1336px;
+    }
+
+    .swiper-container .txt {
+      position: absolute;
+      top: 12%;
+      left: 2%;
+      z-index: 100;
+      /* pointer-events: none; */
+      width: 49%;
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <img src="./images/site03_01.jpg" alt="">
-    <img src="./images/site03_02.jpg" alt="">
-    <img src="./images/site03_03.jpg" alt="">
-    <img src="./images/site03_04.jpg" alt="">
-    <img src="./images/site03_05.jpg" alt="">
-    <img src="./images/site03_06.jpg" alt="">
-    <img src="./images/site03_07.jpg" alt="">
+    <div class="header">
+      <img src="./images/04/header.png" alt="">
+    </div>
+    <div class="swiper-container">
+      <div class="txt">
+        <img src="./images/04/txt.png" alt="">
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./images/04/site04_01.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./images/04/site04_01_2.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./images/04/site04_01_3.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./images/04/site04_01_4.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./images/04/site04_01_5.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./images/04/site04_01_6.jpg" alt=""></div>
+      </div>
+    </div>
+    <img src="./images/04/site04_02.jpg" alt="">
+    <img src="./images/04/site04_03.jpg" alt="">
+    <img src="./images/04/site04_04.jpg" alt="">
+    <img src="./images/04/site04_05.jpg" alt="">
+    <img src="./images/04/site04_06.jpg" alt="">
+    <img src="./images/04/site04_07.jpg" alt="">
+    <img src="./images/04/site04_08.jpg" alt="">
+    <img src="./images/04/site04_09.jpg" alt="">
   </div>
 </body>
+<script>
+  var mySwiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    // direction: 'vertical',
+    loop: true,
+    speed: 800,
+    autoplay: {
+      delay: 3000,
+    },
+    // If we need pagination
+    // pagination: {
+    //   el: '.swiper-pagination',
+    // },
+
+    // // Navigation arrows
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
+
+    // // And if we need scrollbar
+    // scrollbar: {
+    //   el: '.swiper-scrollbar',
+    // },
+  })
+</script>
 
 </html>
