@@ -8,8 +8,6 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <style>
     body {
       background-color: #f6f6f6;
@@ -85,7 +83,7 @@
       </div>
     </div>
     <img src="./images/04/site04_02.jpg?v=2" alt="">
-    <img src="./images/04/site04_03.jpg?v=2" alt="">
+    <img src="./images/04/site04_03.jpg?v=2" alt="" class='tempClick'>
     <img src="./images/04/site04_04.jpg?v=2" alt="">
     <img src="./images/04/site04_05.jpg?v=2" alt="">
     <img src="./images/04/site04_06.jpg?v=2" alt="">
@@ -94,31 +92,32 @@
     <img src="./images/04/site04_09.jpg?v=2" alt="">
   </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 <script>
   var mySwiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    // direction: 'vertical',
     loop: true,
     speed: 800,
     autoplay: {
       delay: 3000,
     },
-    // If we need pagination
-    // pagination: {
-    //   el: '.swiper-pagination',
-    // },
 
-    // // Navigation arrows
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
-
-    // // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
   })
+
+  $('.tempClick').click(function(){
+    var t = $(this);
+
+    if(!t.hasClass('active')){
+      t.attr('src','./images/04/site04_03_2.jpg')
+    }else{
+      t.attr('src','./images/04/site04_03.jpg')
+    }
+
+    t.toggleClass('active')
+  });
 </script>
 
 </html>
