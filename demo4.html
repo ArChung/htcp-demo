@@ -61,6 +61,12 @@
       /* pointer-events: none; */
       width: 49%;
     }
+    .swiper-button-next, .swiper-button-prev{
+      color: white;
+    }
+    .swiper-pagination-bullet-active{
+      background-color: #fcbd50;
+    }
   </style>
 </head>
 
@@ -81,6 +87,10 @@
         <div class="swiper-slide"><img src="./images/04/site04_01_5.jpg?v=2" alt=""></div>
         <div class="swiper-slide"><img src="./images/04/site04_01_6.jpg?v=2" alt=""></div>
       </div>
+      <div class="swiper-pagination"></div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
     <img src="./images/04/site04_02.jpg?v=2" alt="">
     <img src="./images/04/site04_03.jpg?v=2" alt="" class='tempClick'>
@@ -104,16 +114,25 @@
     autoplay: {
       delay: 3000,
     },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
 
   })
 
-  $('.tempClick').click(function(){
+  $('.tempClick').click(function () {
     var t = $(this);
 
-    if(!t.hasClass('active')){
-      t.attr('src','./images/04/site04_03_2.jpg')
-    }else{
-      t.attr('src','./images/04/site04_03.jpg')
+    if (!t.hasClass('active')) {
+      t.attr('src', './images/04/site04_03_2.jpg')
+    } else {
+      t.attr('src', './images/04/site04_03.jpg')
     }
 
     t.toggleClass('active')
